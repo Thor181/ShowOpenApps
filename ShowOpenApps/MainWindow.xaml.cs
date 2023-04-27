@@ -32,7 +32,7 @@ namespace ShowOpenApps
             var processes = Process.GetProcesses().Where(x => x.MainWindowHandle != IntPtr.Zero).ToList();
             foreach (var item in processes)
             {
-                Console.WriteLine(item.ProcessName);
+                sConsole.WriteLine(item.ProcessName);
             }
 
             IntPtr hWnd = processes[5].MainWindowHandle;
